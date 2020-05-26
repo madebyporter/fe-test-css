@@ -32,21 +32,21 @@ const Person: React.FC<Props> = props => {
     }
 
     .PersonCard-container {
+      background-color: ${COLORS.BG_COLOR};
       display: flex;
       height: auto;
       width: 100%;
       @media only screen and (min-width: ${BP.TABLET}) {
         align-items: center;
-        height: 100%;
-        width: 300px; 
+        max-width: 40%;
+        width: auto; 
       }
     }
 
     .PersonDetails-container {
       border-top: 2px solid ${COLORS.BORDER_COLOR};
       padding: ${theme.spacing(2)}px;
-      width: 500px;
-      
+      width: 100%;
       @media only screen and (min-width: ${BP.TABLET}) {
         border-top: 0;
         border-left: 2px solid ${COLORS.BORDER_COLOR};

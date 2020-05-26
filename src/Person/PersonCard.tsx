@@ -19,7 +19,6 @@ const PersonCard: React.FC<Props> = props => {
 
   const style = css`
     align-items: center;
-    background-color: ${COLORS.BG_COLOR};
     display: flex;
     height: auto;
     padding: ${theme.spacing(2)}px;

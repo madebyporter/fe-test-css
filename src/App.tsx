@@ -47,7 +47,7 @@ const personData: Account = {
       company: 'YouTube',
       position: 'Camera Operator',
       productionTitle: 'Hometown Movies Vol I',
-      year: 2016
+      year: 2015
     },
     {
       id: '12',

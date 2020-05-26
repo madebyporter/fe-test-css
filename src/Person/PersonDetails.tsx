@@ -6,6 +6,7 @@ import { css, jsx } from '@emotion/core';
 import Button from '@material-ui/core/Button';
 import { Account } from '../App';
 import PersonCredit from './PersonCredit';
+import { COLORS } from '../colors';
 
 type Props = {
   className?: string;
@@ -29,7 +30,7 @@ const PersonDetails: React.FC<Props> = props => {
     height: 100%;
     flex: 1;
     .contact {
-      background: #f5f5f5;
+      background-color: ${COLORS.BG_COLOR};
     }
   `;
 
