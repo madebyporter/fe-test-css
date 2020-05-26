@@ -27,19 +27,17 @@ const Person: React.FC<Props> = props => {
     justify-content: center;
     @media only screen and (min-width: ${BP.TABLET}) {
       flex-wrap: nowrap;
-    }
-    
-    .Person {
-      width: 100%;
-      @media only screen and (min-width: ${BP.TABLET}) {
-        width: 850px; 
-      }
+      max-width: 850px;
+      width: auto;
     }
 
     .PersonCard-container {
+      display: flex;
+      height: auto;
       width: 100%;
-      height: 100%;
       @media only screen and (min-width: ${BP.TABLET}) {
+        align-items: center;
+        height: 100%;
         width: 300px; 
       }
     }
