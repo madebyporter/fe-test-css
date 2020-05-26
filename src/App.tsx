@@ -96,7 +96,7 @@ const App: React.FC<{}> = () => {
       justify-content: center;
       margin: 0 auto;
       height: 100vh;
-      width: 100vw;
+      padding: 1rem;
     }
   `;
 

@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { useTheme } from '@material-ui/core/styles';
 import { Credit } from '../App';
 import { COLORS } from '../colors';
+import { BP } from '../breakpoints';
 
 type Props = {
   className?: string;
@@ -19,31 +20,49 @@ const PersonCredit: React.FC<Props> = props => {
 
   const style = css`
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 ${theme.spacing(2)}px 0;
+    padding: 0 0 ${theme.spacing(2)}px 0;
     width: 100%;
     justify-content: space-between;
 
-    .credit-top {
-      margin: ${theme.spacing(1)}px 0;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
 
-      &-left {
-        font-weight: 800;
+    & > * {
+      width: 100%;
+      @media only screen and (min-width: ${BP.TABLET}) {
+        width: 50%;
       }
+    }
 
-      &-right {
-        font-weight: normal;
+    .PersonCredit-left {
+      margin: 0 0 ${theme.spacing(1)}px 0;
+    }
+
+    .PersonCredit-right {
+      text-align: left;
+      @media only screen and (min-width: ${BP.TABLET}) {
         text-align: right;
       }
     }
 
-    .credit-bottom {
-
+    .credit-top {
       &-left {
-        font-weight: 400;
-        color: gray;
+        font-weight: 800;
+        width: 100%;
       }
 
       &-right {
-        text-align: right;
+        font-weight: normal;
+      }
+    }
+
+    .credit-bottom {
+      &-left {
+        font-weight: 400;
+        color: gray;
       }
     }
 

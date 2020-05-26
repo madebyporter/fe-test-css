@@ -9,6 +9,7 @@ import PersonCard from './PersonCard';
 import { Account } from '../App';
 import PersonDetails from './PersonDetails';
 import { COLORS } from '../colors';
+import { BP } from '../breakpoints';
 
 type Props = {
   className?: string;
@@ -19,24 +20,39 @@ const Person: React.FC<Props> = props => {
   const { className = '', accountData } = props;
   const theme = useTheme();
   const style = css`
+    border: 2px solid ${COLORS.BORDER_COLOR};
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: center;
-
+    @media only screen and (min-width: ${BP.TABLET}) {
+      flex-wrap: nowrap;
+    }
+    
     .Person {
-      width: 850px;
+      width: 100%;
+      @media only screen and (min-width: ${BP.TABLET}) {
+        width: 850px; 
+      }
     }
 
     .PersonCard-container {
-      width: 300px;
+      width: 100%;
+      height: 100%;
+      @media only screen and (min-width: ${BP.TABLET}) {
+        width: 300px; 
+      }
     }
 
     .PersonDetails-container {
+      border-top: 2px solid ${COLORS.BORDER_COLOR};
+      padding: ${theme.spacing(2)}px;
       width: 500px;
-      padding: ${theme.spacing(1)}px;
-
-      border: 2px solid ${COLORS.BORDER_COLOR};
-      border-left: none;
+      
+      @media only screen and (min-width: ${BP.TABLET}) {
+        border-top: 0;
+        border-left: 2px solid ${COLORS.BORDER_COLOR};
+      }
     }
   `;
 
